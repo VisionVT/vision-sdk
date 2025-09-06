@@ -1,4 +1,4 @@
-# VisionVT (Early Beta)
+# Aria-Sama (Early Beta)
 
 **Warning: This project is in early beta and should not be used for production or streaming yet. Features and stability are incomplete.**
 
