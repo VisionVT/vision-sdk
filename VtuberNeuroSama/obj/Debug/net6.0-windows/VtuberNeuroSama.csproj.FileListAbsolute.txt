@@ -1,0 +1,34 @@
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\bin\Debug\net6.0-windows\VtuberNeuroSama.exe
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\bin\Debug\net6.0-windows\avatar.png
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\bin\Debug\net6.0-windows\VtuberNeuroSama.deps.json
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\bin\Debug\net6.0-windows\VtuberNeuroSama.runtimeconfig.json
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\bin\Debug\net6.0-windows\VtuberNeuroSama.dll
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\bin\Debug\net6.0-windows\VtuberNeuroSama.pdb
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\bin\Debug\net6.0-windows\System.Speech.dll
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Speech.dll
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.csproj.AssemblyReference.cache
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\Themes\Generic.baml
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama_Content.g.cs
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama_MarkupCompile.cache
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.g.resources
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.AssemblyInfoInputs.cache
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.AssemblyInfo.cs
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.csproj.CoreCompileInputs.cache
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.sourcelink.json
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNe.1FEF9600.Up2Date
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.dll
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\refint\VtuberNeuroSama.dll
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.pdb
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.genruntimeconfig.cache
+C:\Users\name\OneDrive\Documents\Visual Studio 2022\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\ref\VtuberNeuroSama.dll
+C:\Users\name\OneDrive\Documents\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\Themes\Generic.baml
+C:\Users\name\OneDrive\Documents\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\name\OneDrive\Documents\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama_Content.g.cs
+C:\Users\name\OneDrive\Documents\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama_MarkupCompile.cache
+C:\Users\name\OneDrive\Documents\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.dll
+C:\Users\name\OneDrive\Documents\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\refint\VtuberNeuroSama.dll
+C:\Users\name\OneDrive\Documents\vision-sdk\VtuberNeuroSama\obj\Debug\net6.0-windows\VtuberNeuroSama.pdb
