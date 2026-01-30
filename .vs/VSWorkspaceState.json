@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\VtuberNeuroSama"
+    "\\vtuber-stream-app",
+    "\\vtuber-stream-app\\public",
+    "\\vtuber-stream-app\\src",
+    "\\VtuberNeuroSama",
+    "\\VtuberNeuroSama\\bin",
+    "\\VtuberNeuroSama\\obj",
+    "\\VtuberNeuroSama\\obj\\Debug",
+    "\\VtuberNeuroSama\\Themes"
   ],
+  "SelectedNode": "\\VtuberNeuroSama\\VtuberNeuroSama.csproj",
   "PreviewInSolutionExplorer": false
 }

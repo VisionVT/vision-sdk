@@ -3,5 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- VS 2026 Colors -->
+        <Color x:Key="VSBg">#1E1E1E</Color>
+        <Color x:Key="VSBgSecondary">#252526</Color>
+        <Color x:Key="VSBgTertiary">#2D2D30</Color>
+        <Color x:Key="VSText">#CCCCCC</Color>
+        <Color x:Key="VSTextSecondary">#969696</Color>
+        <Color x:Key="VSAccent">#007ACC</Color>
+        <Color x:Key="VSBorder">#3E3E42</Color>
+        
+        <!-- Brushes -->
+        <SolidColorBrush x:Key="VSBgBrush" Color="{StaticResource VSBg}"/>
+        <SolidColorBrush x:Key="VSBgSecondaryBrush" Color="{StaticResource VSBgSecondary}"/>
+        <SolidColorBrush x:Key="VSBgTertiaryBrush" Color="{StaticResource VSBgTertiary}"/>
+        <SolidColorBrush x:Key="VSTextBrush" Color="{StaticResource VSText}"/>
+        <SolidColorBrush x:Key="VSTextSecondaryBrush" Color="{StaticResource VSTextSecondary}"/>
+        <SolidColorBrush x:Key="VSAccentBrush" Color="{StaticResource VSAccent}"/>
+        <SolidColorBrush x:Key="VSBorderBrush" Color="{StaticResource VSBorder}"/>
+
+        <!-- Button Styles -->
+        <Style x:Key="VSButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource VSBgTertiaryBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource VSTextBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="{StaticResource VSBorderBrush}"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style x:Key="VSPrimaryButtonStyle" TargetType="Button" BasedOn="{StaticResource VSButtonStyle}">
+            <Setter Property="Background" Value="{StaticResource VSAccentBrush}"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- TextBox Style -->
+        <Style x:Key="VSTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="{StaticResource VSBgSecondaryBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource VSTextBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="{StaticResource VSBorderBrush}"/>
+            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="CaretBrush" Value="{StaticResource VSTextBrush}"/>
+        </Style>
     </Application.Resources>
 </Application>
