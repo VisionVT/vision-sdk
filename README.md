@@ -178,7 +178,7 @@ Contributions are welcome! Please ensure:
 - New features include basic error handling
 
 ## License
-[Add your license here]
+Go to LICENCE.md
 
 ## Contact & Support
 - **Repository:** https://github.com/VisionVT/vision-sdk
