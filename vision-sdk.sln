@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VtuberNeuroSama", "VtuberNeuroSama\VtuberNeuroSama.csproj", "{58E3BD80-6AAB-66DE-8E2F-7657B54F55EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AriaSama", "AriaSama\AriaSama.csproj", "{58E3BD80-6AAB-66DE-8E2F-7657B54F55EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
