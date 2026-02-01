@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\vtuber-stream-app",
-    "\\vtuber-stream-app\\public",
-    "\\vtuber-stream-app\\src",
-    "\\VtuberNeuroSama",
-    "\\VtuberNeuroSama\\bin",
-    "\\VtuberNeuroSama\\obj",
-    "\\VtuberNeuroSama\\obj\\Debug",
-    "\\VtuberNeuroSama\\Themes"
+    "\\AriaSama",
+    "\\AriaSama\\bin",
+    "\\AriaSama\\bin\\Debug\\net8.0-windows",
+    "\\AriaSama\\bin\\Debug\\net8.0-windows\\ja",
+    "\\AriaSama\\bin\\Debug\\net8.0-windows\\ko",
+    "\\AriaSama\\bin\\Debug\\net8.0-windows\\pl",
+    "\\AriaSama\\bin\\Debug\\net8.0-windows\\pt-BR",
+    "\\AriaSama\\bin\\Debug\\net8.0-windows\\ru",
+    "\\AriaSama\\bin\\Debug\\net8.0-windows\\runtimes"
   ],
-  "SelectedNode": "\\VtuberNeuroSama\\VtuberNeuroSama.csproj",
+  "SelectedNode": "\\AriaSama\\App.xaml",
   "PreviewInSolutionExplorer": false
 }
