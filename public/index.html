@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision SDK Interface - Twitch & Vision</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: transparent; color: #cdd6f4; margin: 0; padding: 20px; display: flex; height: 100vh; }
+    .vtuber { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); width: 200px; }
+    .vtuber img { width: 100%; background: transparent; }
+    .main { flex: 1; display: flex; flex-direction: column; }
+    .chat-container { flex: 1; background: rgba(49, 50, 68, 0.9); padding: 20px; border-radius: 10px; margin-right: 220px; display: flex; flex-direction: column; }
+    .messages { flex: 1; overflow-y: auto; margin-bottom: 10px; }
+    .input-area { display: flex; gap: 10px; }
+    input { flex: 1; padding: 10px; border: none; border-radius: 5px; }
+    button { background: #89b4fa; color: #1e1e2e; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+    .tts-toggle { background: #f38ba8; }
+    .vision { position: fixed; bottom: 20px; left: 20px; background: rgba(49, 50, 68, 0.9); padding: 10px; border-radius: 10px; }
+    .vision video { width: 300px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <div class="vtuber">
+    <img src="https://via.placeholder.com/200x300?text=VTuber" alt="VTuber Model">
+  </div>
+
+  <div class="main">
+    <div class="chat-container">
+      <h2>AI Chat</h2>
+      <div class="messages" id="aiMessages"></div>
+      <div class="input-area">
+        <input type="text" id="chatInput" placeholder="Talk to AI...">
+        <button id="sendBtn">Send</button>
+        <button id="ttsBtn" class="tts-toggle">TTS Off</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="vision">
+    <h3>Screen Vision</h3>
+    <video id="video" autoplay></video>
+    <button id="startScreen">Start Share</button>
+    <button id="capture">Capture</button>
+    <div id="captured"></div>
+  </div>
+
+  <script>
+    // Check if setup is done
+    const openaiKey = localStorage.getItem('visionSdk_openaiKey');
+    const ollamaUrl = localStorage.getItem('visionSdk_ollamaUrl');
+    if (!openaiKey || !ollamaUrl) {
+      window.location.href = '/setup';
+    }
+
+    const socket = io();
+    let ttsEnabled = false;
+
+    // AI Chat
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const ttsBtn = document.getElementById('ttsBtn');
+    const aiMessages = document.getElementById('aiMessages');
+
+    sendBtn.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    ttsBtn.addEventListener('click', () => {
+      ttsEnabled = !ttsEnabled;
+      ttsBtn.textContent = ttsEnabled ? 'TTS On' : 'TTS Off';
+      ttsBtn.style.background = ttsEnabled ? '#a6e3a1' : '#f38ba8';
+    });
+
+    function sendMessage() {
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      addMessage('You', message);
+      chatInput.value = '';
+
+      socket.emit('aiMessage', { message, openaiKey, ollamaUrl });
+    }
+
+    socket.on('aiResponse', (data) => {
+      addMessage('AI', data.response);
+      if (ttsEnabled) {
+        speak(data.response);
+      }
+    });
+
+    function addMessage(sender, text) {
+      const msgDiv = document.createElement('div');
+      msgDiv.innerHTML = `<strong>${sender}:</strong> ${text}`;
+      aiMessages.appendChild(msgDiv);
+      aiMessages.scrollTop = aiMessages.scrollHeight;
+    }
+
+    function speak(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Screen capture
+    const video = document.getElementById('video');
+    const startBtn = document.getElementById('startScreen');
+    const captureBtn = document.getElementById('capture');
+    const capturedDiv = document.getElementById('captured');
+
+    startBtn.addEventListener('click', async () => {
+      try {
+        const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+        video.srcObject = stream;
+      } catch (err) {
+        console.error('Error accessing screen:', err);
+      }
+    });
+
+    captureBtn.addEventListener('click', () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      const context = canvas.getContext('2d');
+      context.drawImage(video, 0, 0);
+      const imageData = canvas.toDataURL('image/png');
+      capturedDiv.innerHTML = `<img src="${imageData}" alt="Captured screenshot" style="max-width:100%;">`;
+    });
+  </script>
+</body>
+</html>

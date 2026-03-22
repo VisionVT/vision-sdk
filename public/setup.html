@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision SDK Setup</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #1e1e2e; color: #cdd6f4; margin: 0; padding: 20px; text-align: center; }
+    .setup { max-width: 400px; margin: 0 auto; background: #313244; padding: 20px; border-radius: 10px; }
+    input { width: 100%; padding: 10px; margin: 10px 0; border: none; border-radius: 5px; }
+    button { background: #89b4fa; color: #1e1e2e; border: none; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%; }
+    .logo { font-size: 2em; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="setup">
+    <div class="logo">Vision SDK Setup</div>
+    <p>Welcome to Vision SDK! Please configure your API keys and settings.</p>
+    <form id="setupForm">
+      <input type="text" id="openaiKey" placeholder="OpenAI API Key" required>
+      <input type="text" id="ollamaUrl" placeholder="Ollama URL (e.g., http://localhost:11434)" required>
+      <button type="submit">Save Configuration</button>
+    </form>
+    <p id="status"></p>
+  </div>
+
+  <script>
+    const socket = io();
+    const form = document.getElementById('setupForm');
+    const status = document.getElementById('status');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const openaiKey = document.getElementById('openaiKey').value;
+      const ollamaUrl = document.getElementById('ollamaUrl').value;
+
+      // Save to localStorage
+      localStorage.setItem('visionSdk_openaiKey', openaiKey);
+      localStorage.setItem('visionSdk_ollamaUrl', ollamaUrl);
+
+      // Send to server
+      socket.emit('saveConfig', { openaiKey, ollamaUrl });
+
+      status.textContent = 'Configuration saved! Redirecting...';
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
